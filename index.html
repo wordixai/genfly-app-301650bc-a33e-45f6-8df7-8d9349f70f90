@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <meta name="description" content="genfly Generated Project" />
-    <meta name="author" content="genfly" />
+    <title>Smart Packing Assistant</title>
+    <meta name="description" content="Generate personalized packing lists based on destination, duration, and activities" />
+    <meta name="author" content="Smart Packing Assistant" />
     <meta property="og:image" content="/og-image.png" /> 
   </head>
 
@@ -13,5 +13,23 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script type="module" src="https://www.genfly.dev/editor.js"></script>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .print-area, .print-area * {
+          visibility: visible;
+        }
+        .print-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        button, .no-print {
+          display: none !important;
+        }
+      }
+    </style>
   </body>
 </html>
